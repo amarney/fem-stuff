@@ -1,2 +1,2 @@
-#basic_fem_1d_code
-#elasticity_fem_2d_code
+1D code is nice and clean and written in Julia.
+For an example of usage, see run_example1.jl
