@@ -10,7 +10,7 @@ include("finite_element_package_1d.jl")
 #   where the known functions are
 #
 #   a = 1 + cos(x),    c = 1/(x + 1)
-#   f = (sin(x) - cos(x) + 1/(x + 1))e^x
+#   f = (sin(x) - cos(x) - 1 + 1/(x + 1))e^x
 ## ----------------------------------------------------------------------------
 # The solution is u = e^x.
 # From this BVP, we can derive the following weak problem:
