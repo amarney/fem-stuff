@@ -5,7 +5,7 @@ include("finite_element_package_1d.jl")
 # BVP: Find u such that
 #
 #   -(au')' + cu = f,  x \in (0, 1)
-#   u(0) = 1,    a(1)u'(1) = 2
+#   a(0)u'(0) = 2,    u(1) = exp(1)
 #
 #   where the known functions are
 #
@@ -22,7 +22,7 @@ include("finite_element_package_1d.jl")
 #   for all v \in T where
 #
 #   T = H^1 (0, 1) with v(1) = 0
-#   S = H^1 (0, 1) with u(0) = 1
+#   S = H^1 (0, 1) with u(0) = exp(0)
 ## ----------------------------------------------------------------------------
 # From this weak problem, we can derive the finite element problem:
 ## ----------------------------------------------------------------------------
@@ -119,7 +119,6 @@ tx = 0.5
 utx = Float64
 for k = 1:size(mesh.eleConn, 1)  # loop over all the elements
   element = mesh.x[mesh.eleConn[k, :]]
-  #@show element
   if ((tx - element[1])*(tx - element[2]) <= 0)  # if x is in this element
     uLocal = uGlobal[fem.feConn[k, :]]           # extract the local coefficients
     derivOrder = 0
