@@ -68,7 +68,7 @@ dof, nt = boundaryclassify1d(fem, domain, indexBC)
 fName(x) = exp(x).*(sin(x) - cos(x) - 1 + 1./(x + 1))  # fName from linear form
 derivOrder = 0  # no derivatives on v
 rule = 5        # 5 point quadrature rule to be safe
-fh_0 = linformglob1d(fName, mesh, fem, derivOrder, rule)
+fh_0 = linformglob1d(fName, mesh, vfem, derivOrder, rule)
 f_0 = fh_0[dof]
 
 ## Assemble the A_{1,1} matrix
@@ -94,7 +94,7 @@ temp = -Ah_11*uEss   # negative because we subtract it over to the rhs
 b_eA = temp[dof]
 
 ## Assemble the b_{eC} vector
-temp = -Ch_00*uEss   # negative because we subtarct it over to the rhs
+temp = -Ch_00*uEss   # negative because we subtract it over to the rhs
 b_eC = temp[dof]
 
 ## Assemble the b_{n} vector
