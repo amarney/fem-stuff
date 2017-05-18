@@ -21,8 +21,8 @@ include("finite_element_package_1d.jl")
 #
 #   for all v \in T where
 #
-#   T = H^1 (0, 1) with v(1) = 0
-#   S = H^1 (0, 1) with u(0) = exp(0)
+#   T = H^1 (0, 1) with v(0) = 0
+#   S = H^1 (0, 1) with u(1) = exp(1)
 ## ----------------------------------------------------------------------------
 # From this weak problem, we can derive the finite element problem:
 ## ----------------------------------------------------------------------------
