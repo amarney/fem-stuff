@@ -21,9 +21,10 @@ include("finite_element_package_1d.jl")
 #
 #   for all v \in T where
 #
-#   T = H^1 (0, 1) with v(0) = 0
+#   T = H^1 (0, 1) with v(0) = 0  
 #   S = H^1 (0, 1) with u(1) = exp(1)
 ## ----------------------------------------------------------------------------
+# We call T the "test function space" and S the "trial function set".
 # From this weak problem, we can derive the finite element problem:
 ## ----------------------------------------------------------------------------
 # FE problem: Find a vector uGlobal such that
